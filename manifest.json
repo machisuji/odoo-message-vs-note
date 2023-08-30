@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Odoo Message vs Note",
+    "version": "1.0",
+    "description": "Helps you not accidentally write a message when you meant to write a note.",
+    "icons": {
+        "16": "images/odoo-message-vs-note-16.png",
+        "32": "images/odoo-message-vs-note-32.png",
+        "48": "images/odoo-message-vs-note-48.png",
+        "128": "images/odoo-message-vs-note-128.png"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://helpdesk.openproject.org/web*"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+  }
